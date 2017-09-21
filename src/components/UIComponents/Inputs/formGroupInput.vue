@@ -21,7 +21,6 @@
       value: [String, Number]
     }
   }
-
 </script>
 <style>
 

@@ -22,7 +22,6 @@
       }
     }
   }
-
 </script>
 <style lang="scss">
   $bg-nude: #f4f3ef !default;

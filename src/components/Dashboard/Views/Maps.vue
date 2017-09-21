@@ -67,7 +67,6 @@
       marker.setMap(map)
     }
   }
-
 </script>
 <style>
 

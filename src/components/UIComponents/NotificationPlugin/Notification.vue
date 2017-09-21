@@ -77,7 +77,6 @@
       }
     }
   }
-
 </script>
 <style lang="scss" scoped>
   @import "../../../assets/sass/paper/variables";

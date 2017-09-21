@@ -85,7 +85,6 @@
       this.$nextTick(this.initChart)
     }
   }
-
 </script>
 <style>
 

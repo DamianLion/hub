@@ -25,7 +25,6 @@
       }
     }
   }
-
 </script>
 <style lang="scss">
   .list-item {
