@@ -12,6 +12,7 @@ script:
   - npm run build
   - npm test
   - npm run coveralls
+  - npm run codacy-coverage
 after_success:
 after_failure:
 before_deploy:
