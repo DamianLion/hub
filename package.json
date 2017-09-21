@@ -4,6 +4,7 @@
   "description": "Cuy short for Guinea pig and Zeplin a management application for pet cages",
   "author": "Damian Lion Maring <damianmaring@googlemail.com>",
   "private": true,
+  "licence": "GPL-3.0",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
