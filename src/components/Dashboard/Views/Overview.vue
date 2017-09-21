@@ -60,7 +60,6 @@
 <script>
   import StatsCard from '@/components/UIComponents/Cards/StatsCard.vue'
   import ChartCard from '@/components/UIComponents/Cards/ChartCard.vue'
-  // import LiveCard from '@/components/UIComponents/Cards/LiveCard.vue'
   export default {
     sockets: {
         connect () {
@@ -82,7 +81,6 @@
     components: {
       StatsCard,
       ChartCard
-      // LiveCard
     },
     /**
      * Chart data used to render stats, charts. Should be replaced with server data

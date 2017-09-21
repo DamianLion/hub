@@ -4,9 +4,9 @@ node_js:
 before_install:
 install:
   - npm install
-  - npm run build
 before_script:
 script:
+  - npm run build
   - npm test
 after_success:
 after_failure:
