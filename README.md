@@ -1,4 +1,4 @@
-# cuyplin
+# cuyplin [![Build Status](https://travis-ci.org/cuyplin/web.svg?branch=master)](https://travis-ci.org/cuyplin/web)
 
 > Cuy short for Guinea pig and Zeplin a management application for pet cages
 
