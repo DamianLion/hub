@@ -1,54 +1,38 @@
 <template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
-    </main>
+  <div :class="{'nav-open': $sidebar.showSidebar}">
+    <router-view></router-view>
+    <!--This sidebar appears only for screens smaller than 992px-->
+    <side-bar type="navbar" :sidebar-links="$sidebar.sidebarLinks">
+      <ul class="nav navbar-nav">
+        <li>
+          <a class="dropdown-toggle" data-toggle="dropdown">
+            <i class="ti-panel"></i>
+            <p>Stats</p>
+          </a>
+        </li>
+        <drop-down title="5 Notifications" icon="ti-bell">
+
+          <li><a>Notification 1</a></li>
+          <li><a>Notification 2</a></li>
+          <li><a>Notification 3</a></li>
+          <li><a>Notification 4</a></li>
+          <li><a>Another notification</a></li>
+
+        </drop-down>
+        <li>
+          <a>
+            <i class="ti-settings"></i>
+            <p>Settings</p>
+          </a>
+        </li>
+        <li class="divider"></li>
+      </ul>
+    </side-bar>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  export default {}
 </script>
 
-<style>
-body {
-  margin: 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-main {
-  text-align: center;
-  margin-top: 40px;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
-}
-</style>
+<style lang="scss"></style>
