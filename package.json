@@ -2,7 +2,7 @@
   "name": "cuyplin",
   "version": "1.0.0",
   "description": "Cuy short for Guinea pig and Zeplin a management application for pet cages",
-  "author": "Damian Lion Maring <damianmaring@googlemail.com>",
+  "author": "Damian Lion Maring",
   "private": true,
   "licence": "GPL-3.0",
   "scripts": {
