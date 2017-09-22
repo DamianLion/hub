@@ -24,10 +24,10 @@
   }
 </script>
 <style lang="scss">
-  $bg-nude: #f4f3ef !default;
-  
+  $bg-dark: #404040 !default;
+
   .moving-arrow {
-    border-right: 17px solid $bg-nude;
+    border-right: 17px solid $bg-dark;
     border-top: 17px solid transparent;
     border-bottom: 17px solid transparent;
     display: inline-block;

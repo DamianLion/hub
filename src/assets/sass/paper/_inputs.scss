@@ -25,7 +25,7 @@
   @include box-shadow(none);
 
   &:focus {
-    background-color: $white-bg;
+    background-color: lighten($gray-input-bg, 5%);
     @include box-shadow(none);
     outline: 0 !important;
   }
@@ -144,7 +144,7 @@
 }
 
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-  background-color: $light-gray;
+  background-color: darken($gray-background-color, 2%);
   cursor: not-allowed;
   @include placeholder($dark-gray, 1);
 }

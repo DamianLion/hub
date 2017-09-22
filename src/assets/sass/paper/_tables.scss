@@ -62,10 +62,10 @@
 
 .table-striped {
   tbody > tr:nth-of-type(2n+1) {
-    background-color: #fff;
+    background-color: lighten($gray-background-color, 1%);
   }
   tbody > tr:nth-of-type(2n) {
-    background-color: $pale-bg;
+    background-color: lighten($gray-background-color, 3%);
   }
   > thead > tr > th,
   > tbody > tr > th,
