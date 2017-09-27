@@ -4,7 +4,7 @@ const SidebarStore = {
   showSidebar: false,
   sidebarLinks: [
     {
-      name: 'Dashboard',
+      name: 'Sensors',
       icon: 'ti-panel',
       path: '/admin/overview'
     },
@@ -17,7 +17,7 @@ const SidebarStore = {
       name: 'Table List',
       icon: 'ti-view-list-alt',
       path: '/admin/table-list'
-    },
+    } /* ,
     {
       name: 'Typography',
       icon: 'ti-text',
@@ -37,7 +37,7 @@ const SidebarStore = {
       name: 'Notifications',
       icon: 'ti-bell',
       path: '/admin/notifications'
-    }
+    } */
   ],
   displaySidebar (value) {
     this.showSidebar = value

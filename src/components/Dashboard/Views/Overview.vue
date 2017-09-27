@@ -3,28 +3,24 @@
 
     <!--Stats cards-->
     <div class="row">
-      <div class="col-lg-3 col-sm-6" v-for="(stats, key, index) in statsCards">
+      <div class="col-lg-3 col-sm-6" v-for="(sensor, key, index) in sensors">
         <stats-card>
-          <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
-            <i :class="stats.icon"></i>
+          <div class="icon-big text-center" :class="`icon-success`" slot="header">
+            <i class="ti-server"></i>
           </div>
           <div class="numbers" slot="content">
-            <p>{{stats.title}}</p>
-            {{stats.value}} {{stats.unit}}
+            <p>{{sensor.name}}</p>
+            {{sensor.value}} {{sensor.unit}}
           </div>
           <div class="stats" slot="footer">
-            <i class="ti-time"></i> <timeago :since="stats.timeStamp" :auto-update="60"></timeago>
+            <i class="ti-time"></i> <timeago :since="sensor.lastUpdated" :auto-update="60"></timeago>
           </div>
         </stats-card>
       </div>
     </div>
-    
-    <!--Charts-->
-    <div class="row">
 
-      <div class="col-xs-12">
-        <!-- here should be a plotter of the water level -->
-      </div>
+    <!--Charts-->
+    <!--<div class="row">
 
       <div class="col-md-6 col-xs-12">
         <chart-card :chart-data="preferencesChart.data"  chart-type="Pie">
@@ -53,11 +49,12 @@
         </chart-card>
       </div>
 
-    </div>
+    </div>-->
 
   </div>
 </template>
 <script>
+  import axios from 'axios'
   import StatsCard from '@/components/UIComponents/Cards/StatsCard.vue'
   import ChartCard from '@/components/UIComponents/Cards/ChartCard.vue'
   export default {
@@ -65,14 +62,19 @@
         connect () {
           console.log('socket connected')
         },
-        waterLevelEmit (val) {
-          console.log(val)
-          this.statsCards.water.value = val.value
-          this.statsCards.water.unit = val.unit
-          this.statsCards.water.timeStamp = val.timeStamp
+        sensorData (val) {
+          this.updateSensor(val)
         }
     },
     methods: {
+      updateSensor (data) {
+        this.sensors.forEach((element, index, array) => {
+          if (element.id === data['sensor_id']) {
+            this.sensors[index].value = data.value
+            this.sensors[index].lastUpdated = data.createdAt
+          }
+        })
+      },
       clickButton (val) {
         // $socket is socket.io-client instance
         this.$socket.emit('emit_method', val)
@@ -87,40 +89,7 @@
      */
     data () {
       return {
-        statsCards: {
-          water: {
-            type: 'warning',
-            icon: 'ti-server',
-            title: 'Water Level',
-            value: 0,
-            unit: 'ml',
-            timeStamp: null
-          },
-          revenue: {
-            type: 'success',
-            icon: 'ti-wallet',
-            title: 'Revenue',
-            value: '1,345',
-            unit: '$',
-            timeStamp: null
-          },
-          errors: {
-            type: 'danger',
-            icon: 'ti-pulse',
-            title: 'Errors',
-            value: '23',
-            unit: null,
-            timeStamp: null
-          },
-          followers: {
-            type: 'info',
-            icon: 'ti-twitter-alt',
-            title: 'Followers',
-            value: '+45',
-            unit: null,
-            timeStamp: null
-          }
-        },
+        sensors: {},
         usersChart: {
           data: {
             labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
@@ -170,6 +139,15 @@
         }
 
       }
+    },
+    mounted () {
+      axios.get('/api/v1/sensors')
+        .then(response => {
+          this.sensors = response.data
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
   }
 </script>

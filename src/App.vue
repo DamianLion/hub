@@ -3,7 +3,7 @@
     <router-view></router-view>
     <!--This sidebar appears only for screens smaller than 992px-->
     <side-bar type="navbar" :sidebar-links="$sidebar.sidebarLinks">
-      <ul class="nav navbar-nav">
+      <!--<ul class="nav navbar-nav">
         <li>
           <a class="dropdown-toggle" data-toggle="dropdown">
             <i class="ti-panel"></i>
@@ -26,7 +26,7 @@
           </a>
         </li>
         <li class="divider"></li>
-      </ul>
+      </ul>-->
     </side-bar>
   </div>
 </template>
