@@ -29,4 +29,18 @@ npm test
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+# TODO
+
+## Make it Docker Compose Ready
+
+- Deploy to blimp.space
+- Create Docker compose 
+
+## User and Authentication
+- Authorize with Github
+- Implement Auth Tokens for MGTT as of Devices (Maybe Device Tokens)
+
+## MGTT
+Accept Events
 implement https://mosquitto.org/
+https://www.npmjs.com/package/mqtt
