@@ -11,8 +11,7 @@
       <div class="copyright pull-right">
         &copy; Coded with
         <i class="fa fa-heart heart"></i> by
-        <a href="https://github.com/cristijora" target="_blank">Cristi Jora</a>.
-        Designed by <a href="https://www.creative-tim.com/?ref=pdf-vuejs" target="_blank">Creative Tim</a>.
+        <a href="https://github.com/blimps/web" target="_blank"> Blimp</a>
       </div>
     </div>
   </footer>

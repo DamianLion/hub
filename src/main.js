@@ -28,7 +28,6 @@ Vue.use(VueTimeago, {
   }
 })
 
-// socket
 Vue.use(VueSocketio, `${window.location.hostname}:3000`)
 
 // plugin setup
