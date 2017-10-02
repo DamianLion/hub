@@ -19,6 +19,24 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './assets/sass/paper-dashboard.scss'
 import 'es6-promise/auto'
 
+// rickshaw
+// eslint-disable-line
+/* eslint-disable */
+
+import * as d3 from 'd3'
+import jQuery from 'jquery'
+window.jQuery = jQuery
+
+import 'jquery-ui/themes/base/core.css'
+import 'jquery-ui/themes/base/theme.css'
+import 'jquery-ui/ui/core'
+import 'jquery-ui/themes/base/slider.css'
+import 'jquery-ui/ui/widgets/slider'
+import 'jquery-ui/ui/widgets/sortable'
+import 'jquery-ui/ui/disable-selection'
+
+/* eslint-enable */
+
 Vue.use(VueTimeago, {
   name: 'timeago', // component name, `timeago` by default
   locale: 'en-US',

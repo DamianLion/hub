@@ -60,8 +60,8 @@
           if (element.id === data['sensor_id']) {
             this.sensors[index].value = data.value
             this.sensors[index].lastUpdated = data.createdAt
-            this.sensors[index].data.unshift(data)
-            this.sensors[index].data.pop()
+            // this.sensors[index].data.unshift(data)
+            // this.sensors[index].data.pop()
           }
         })
       },
