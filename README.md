@@ -1,8 +1,9 @@
 <img src="https://raw.githubusercontent.com/blimpify/animations/master/gif.gif" width="100%">
 
-# blimpify [![Build Status](https://travis-ci.org/cuyplin/web.svg?branch=master)](https://travis-ci.org/cuyplin/web) [![Coverage Status](https://coveralls.io/repos/github/cuyplin/web/badge.svg?branch=master)](https://coveralls.io/github/cuyplin/web?branch=master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/86e4f3d3546d4d738c37615b094d6ad8)](https://www.codacy.com/app/DeltaLikeM/web?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cuyplin/web&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/86e4f3d3546d4d738c37615b094d6ad8)](https://www.codacy.com/app/DeltaLikeM/web?utm_source=github.com&utm_medium=referral&utm_content=blimps/web&utm_campaign=Badge_Coverage)
-
-> Cuy short for Guinea pig and Zeplin a management application for pet cages
+# blimpify [![Build Status](https://travis-ci.org/blimpify/web.svg?branch=master)](https://travis-ci.org/blimpify/web)
+[![Coverage Status](https://coveralls.io/repos/github/blimpify/web/badge.svg)](https://coveralls.io/github/blimpify/web)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/86e4f3d3546d4d738c37615b094d6ad8)](https://www.codacy.com/app/blimpify/web?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=blimpify/web&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/86e4f3d3546d4d738c37615b094d6ad8)](https://www.codacy.com/app/blimpify/web?utm_source=github.com&utm_medium=referral&utm_content=blimpify/web&utm_campaign=Badge_Coverage)
 
 ## Build Setup
 
